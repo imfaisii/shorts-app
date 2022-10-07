@@ -20,17 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('test', function () {
     return [
-        "data" => [
-            "country" => [
-                "name" => "Egypt",
-                "lat" => "1.0",
-                "long" => "1.0",
-                "quotes" => ["�Egypt�is not a country we live in but a country that lives within us. �"],
-            ],
-            "short" => [
-                "link" => request()->root() . "/videos/UK/Ashdown%20forest%20uk.mp4",
-                "thumbnail" => request()->root() . "/thumbnails/UK/Ashdown%20forest%20uk0.png",
-            ],
-        ]
+        "name" => "Egypt",
+        "lat" => "1.0",
+        "long" => "1.0",
+        "quotes" => "�Egypt�is not a country we live in but a country that lives within us. �",
+        "link" => request()->root() . "/videos/UK/Ashdown%20forest%20uk.mp4",
+        "thumbnail" => request()->root() . "/thumbnails/UK/Ashdown%20forest%20uk0.png",
     ];
 });
