@@ -28,8 +28,8 @@ Route::get('test', function () {
                 "quotes" => ["�Egypt�is not a country we live in but a country that lives within us. �"],
             ],
             "short" => [
-                "link" => request()->host() . "/videos/UK/Ashdown%20forest%20uk.mp4",
-                "thumbnail" => request()->host() . "/thumbnails/UK/Ashdown%20forest%20uk0.png",
+                "link" => request()->root() . "/videos/UK/Ashdown%20forest%20uk.mp4",
+                "thumbnail" => request()->root() . "/thumbnails/UK/Ashdown%20forest%20uk0.png",
             ],
         ]
     ];
