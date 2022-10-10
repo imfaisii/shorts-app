@@ -13,6 +13,7 @@
                                 <h5>Request Header #1 => Accept: application/json</h5>
                                 <h5>Request Header #2 => Authorization: Bearer {{ $token }}</h5>
                             </div>
+                            <a href="#">{{ request()->root() . '/api/all-shorts' }}</a>
                         </div>
                     </div>
                 </div>

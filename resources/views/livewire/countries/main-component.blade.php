@@ -4,7 +4,7 @@
         <x-session-status :alert="session('alert')" />
     @endif
 
-    <div class="card-header">Create Country</div>
+    <div class="card-header">Create Place</div>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">

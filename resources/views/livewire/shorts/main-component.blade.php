@@ -9,10 +9,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="mb-3">
-                    <label class="form-label">Country</label>
+                    <label class="form-label">Place</label>
                     <select wire:model.lazy='short.country_id' type="text"
                         class="form-control @error('short.country_id') is-invalid @enderror">
-                        <option>Select a country</option>
+                        <option>Select a place</option>
                         @foreach ($countries as $country)
                             <option value="{{ $country->id }}">{{ $country->name }}</option>
                         @endforeach
