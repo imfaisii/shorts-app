@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Resources\ShortCollection;
+use App\Models\Short;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => 'auth:sanctum'], function () {
+
+    // to get all shorts
+    Route::get('all-shorts', fn () => new ShortCollection(Short::with('country')->get()));
 });
 
-Route::get('test', function () {
+Route::get('test-json', function () {
     return [
         "name" => "Egypt",
         "lat" => "1.0",
