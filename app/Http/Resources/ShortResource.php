@@ -16,6 +16,7 @@ class ShortResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'name' => $this->country->name,
             'lat' => $this->country->lat,
             'long' => $this->country->long,
